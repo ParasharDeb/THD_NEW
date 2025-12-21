@@ -9,7 +9,7 @@ import { redirect } from 'next/navigation';
 // Magazine items (update images/contents as you wish)
 const magazines = [
   {
-    image: './thd 3.jpeg',
+    image: './mag1.jpg',
     title: 'Full Moon Bali',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -17,7 +17,7 @@ const magazines = [
     ctaButton: 'READ NOW',
   },
   {
-    image: './thd 3.jpeg',
+    image: './mag2.jpg',
     title: 'Sacred Grove Escape',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -25,7 +25,7 @@ const magazines = [
     ctaButton: 'READ NOW',
   },
   {
-    image: './thd 3.jpeg',
+    image: './mag3.jpg',
     title: 'Zen Mountain Retreat',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -33,7 +33,7 @@ const magazines = [
     ctaButton: 'READ NOW',
   },
   {
-    image: './thd 3.jpeg',
+    image: './mag4.jpg',
     title: 'Oceanic Bliss Camp',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -41,7 +41,7 @@ const magazines = [
     ctaButton: 'READ NOW',
   },
   {
-    image: './thd 3.jpeg',
+    image: './mag3.jpg',
     title: 'Mystic Valley Journey',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
