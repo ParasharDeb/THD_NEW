@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Leftarrow from '../icons/leftarrow';
 import Rightarrow from '../icons/rightarrow';
+import { redirect } from 'next/navigation';
 
 // Magazine items (update images/contents as you wish)
 const magazines = [
@@ -13,7 +14,7 @@ const magazines = [
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
     description3: 'Connect with a supportive community and return home empowered, renewed, and connected.',
-    ctaButton: 'BOOK NOW',
+    ctaButton: 'READ NOW',
   },
   {
     image: './thd 3.jpeg',
@@ -21,7 +22,7 @@ const magazines = [
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
     description3: 'Connect with a supportive community and return home empowered, renewed, and connected.',
-    ctaButton: 'RESERVE NOW',
+    ctaButton: 'READ NOW',
   },
   {
     image: './thd 3.jpeg',
@@ -29,7 +30,7 @@ const magazines = [
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
     description3: 'Connect with a supportive community and return home empowered, renewed, and connected.',
-    ctaButton: 'JOIN NOW',
+    ctaButton: 'READ NOW',
   },
   {
     image: './thd 3.jpeg',
@@ -37,7 +38,7 @@ const magazines = [
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
     description3: 'Connect with a supportive community and return home empowered, renewed, and connected.',
-    ctaButton: 'REGISTER',
+    ctaButton: 'READ NOW',
   },
   {
     image: './thd 3.jpeg',
@@ -45,7 +46,7 @@ const magazines = [
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
     description3: 'Connect with a supportive community and return home empowered, renewed, and connected.',
-    ctaButton: 'SIGN UP',
+    ctaButton: 'READ NOW',
   },
 ];
 
@@ -67,7 +68,7 @@ export default function RetreatMagazineSection() {
   return (
     <section className="w-full min-h-[320px] bg-bgMain flex flex-col items-center py-8 px-4">
       <h2 className="text-[2rem] font-serif text-textBrown font-semibold mb-6">
-        Which Serene Retreat calls you?
+        OUR MAGAZINE
       </h2>
       {/* Card Carousel */}
       <div className="relative flex justify-center w-full max-w-3xl items-center">
@@ -75,7 +76,7 @@ export default function RetreatMagazineSection() {
         <button
           aria-label="Previous"
           onClick={prev}
-          className="absolute left-[-40px] top-1/2 -translate-y-1/2 text-textBrown text-3xl p-2 hover:bg-accent/10 rounded-full transition z-10"
+          className="absolute cursor-pointer left-[-40px] top-1/2 -translate-y-1/2 text-textBrown text-3xl p-2 hover:bg-accent rounded-full transition z-10"
         >
           <Leftarrow />
         </button>
@@ -117,7 +118,7 @@ export default function RetreatMagazineSection() {
                 <p className="text-[13px] text-textGreen mb-3 leading-snug">
                   {magazines[current].description3}
                 </p>
-                <button className="w-max px-4 py-1 rounded-full border border-accent bg-yellow-100 hover:bg-accent font-medium text-textBrown text-[15px] transition mt-2 shadow">
+                <button className="w-max px-4 py-1 rounded-full border cursor-pointer border-accent bg-yellow-100 hover:bg-bgcream font-medium text-textBrown text-[15px] transition mt-2 shadow"onClick={()=>{redirect("https://drive.google.com/drive/folders/1BIAZT6UEQJnshF2VFs7R42RwRMKPNl8X?usp=drive_link")}}>
                   {magazines[current].ctaButton}
                 </button>
               </motion.div>
@@ -128,7 +129,7 @@ export default function RetreatMagazineSection() {
         <button
           aria-label="Next"
           onClick={next}
-          className="absolute right-[-40px] top-1/2 -translate-y-1/2 text-textBrown text-3xl p-2 hover:bg-accent/10 rounded-full transition z-10"
+          className="absolute cursor-pointer right-[-40px] top-1/2 -translate-y-1/2 text-textBrown text-3xl p-2 hover:bg-accent/10 rounded-full transition z-10"
         >
           <Rightarrow />
         </button>

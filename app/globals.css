@@ -5,7 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-bgMain: #f5eede;
+  --color-bgMain:#eee7c7;
+  --color-bgsecondary:#d8dac5;
   --color-bgcream: #CFBB99;
   --color-accent: #889063;
   --color-text-green: #596756;
@@ -17,6 +18,14 @@
   /* Border Radius */
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @theme inline {

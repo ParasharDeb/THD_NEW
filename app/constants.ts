@@ -8,9 +8,9 @@ export const NAVIGATION = {
 export const HERO = {
   brandName: "THE HARGILA DESK",
   title: "THE HARGILA DESK",
-  description: "Embrace self-discovery and connection at Serene, a transformative wellness retreat designed exclusively for women.",
-  subDescription: "Here, in a haven of tranquility, you'll embark on a journey of healing, growth, and belonging within a supportive community of like-minded women.",
-  ctaButton: "START NOW"
+  description: "The Hargila Desk is a youth-led wildlife conservation magazine that highlights the beautiful intersection of Community, Culture, and Conservation. It’s an online publication where students from across India contribute articles, illustrations, and photographs, sharing their voices on the climate crisis and reflecting on their role in protecting nature.",
+  subDescription: "The magazine's themes focus on community-based conservation stories, conservation rooted in indigenous knowledge systems and ecological memory, eco-feminism, and the growing role of students in climate action.At its heart, The Hargila Desk is a space for emerging climate leaders to share their perspectives and journeys, collaborating for a more community-driven, resilient future.",
+  ctaButton: "READ NOW"
 };
 
 export const MOTO = {
