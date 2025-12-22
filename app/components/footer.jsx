@@ -1,12 +1,11 @@
-'use client';
+"use client";
 
-import { FOOTER } from '../constants';
+import { FOOTER } from "../constants";
 
 export default function FooterSection() {
   return (
     <section className="w-full bg-bgMain py-20 px-6">
       <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
-
         {/* LEFT SIDE — CONTACT INFO */}
         <div>
           <h2 className="text-[2.75rem] font-serif text-textBrown mb-8">
@@ -15,25 +14,34 @@ export default function FooterSection() {
 
           <div className="space-y-6 text-textGreen">
             <div>
-              <p className="text-sm uppercase tracking-wide mb-1">{FOOTER.contact.email.label}</p>
+              <p className="text-sm uppercase tracking-wide mb-1">
+                {FOOTER.contact.email.label}
+              </p>
               <p className="text-base">{FOOTER.contact.email.value}</p>
             </div>
 
             <div>
-              <p className="text-sm uppercase tracking-wide mb-1">{FOOTER.contact.phone.label}</p>
+              <p className="text-sm uppercase tracking-wide mb-1">
+                {FOOTER.contact.phone.label}
+              </p>
               <p className="text-base">{FOOTER.contact.phone.value}</p>
             </div>
 
             <div>
-              <p className="text-sm uppercase tracking-wide mb-1">{FOOTER.contact.address.label}</p>
+              <p className="text-sm uppercase tracking-wide mb-1">
+                {FOOTER.contact.address.label}
+              </p>
               <p className="text-base leading-relaxed">
-                {FOOTER.contact.address.value}<br />
+                {FOOTER.contact.address.value}
+                <br />
                 {FOOTER.contact.address.location}
               </p>
             </div>
 
             <div>
-              <p className="text-sm uppercase tracking-wide mb-3">{FOOTER.contact.social.label}</p>
+              <p className="text-sm uppercase tracking-wide mb-3">
+                {FOOTER.contact.social.label}
+              </p>
               <div className="flex gap-4">
                 {FOOTER.contact.social.platforms.map((s, i) => (
                   <span
@@ -49,9 +57,8 @@ export default function FooterSection() {
         </div>
 
         {/* RIGHT SIDE — FORM */}
-        <div className="bg-bgCream rounded-2xl p-8 shadow-sm">
+        <div className="bg-white border border-neutral-200 rounded-2xl p-8 shadow-sm">
           <form className="space-y-6">
-
             {/* Name + Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -61,7 +68,7 @@ export default function FooterSection() {
                 <input
                   type="text"
                   placeholder={FOOTER.form.name.placeholder}
-                  className="w-full rounded-xl bg-bgMain px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-accent"
+                  className="w-full rounded-xl px-4 py-3 text-sm border border-neutral-200 outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
 
@@ -72,7 +79,7 @@ export default function FooterSection() {
                 <input
                   type="email"
                   placeholder={FOOTER.form.email.placeholder}
-                  className="w-full rounded-xl bg-bgMain px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-accent"
+                  className="w-full rounded-xl px-4 py-3 text-sm border-neutral-200 border outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
             </div>
@@ -85,7 +92,7 @@ export default function FooterSection() {
               <textarea
                 rows={5}
                 placeholder={FOOTER.form.message.placeholder}
-                className="w-full rounded-xl bg-bgMain px-4 py-3 text-sm resize-none outline-none focus:ring-1 focus:ring-accent"
+                className="w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm resize-none outline-none focus:ring-1 focus:ring-accent"
               />
             </div>
 
@@ -96,10 +103,8 @@ export default function FooterSection() {
             >
               {FOOTER.form.submitButton}
             </button>
-
           </form>
         </div>
-
       </div>
     </section>
   );
