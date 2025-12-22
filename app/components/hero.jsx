@@ -64,7 +64,7 @@ export default function HeroSection() {
       {/* SCROLLER 2 — TEXT TICKER */}
       <div className="w-full overflow-hidden bg-yellow py-2">
         <div className="flex w-max gap-12 px-6 font-serif text-lg animate-scroll-slow">
-          {Array(100).fill("The Hargila Desk").map((text, i) => (
+          {Array(100).fill(HERO.tickerText).map((text, i) => (
             <span key={i} className="whitespace-nowrap">
               {text}
             </span>

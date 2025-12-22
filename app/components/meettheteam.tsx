@@ -2,47 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from 'framer-motion';
-
-type TeamMember = {
-  name: string;
-  role: string;
-  quote: string;
-  image: string;
-};
-
-const TEAM: TeamMember[] = [
-  {
-    name: 'Jacob Jose',
-    role: 'New York Times',
-    quote:
-      'Unlimited, instant access to hundreds of premium quality resources created by designers.',
-    image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12',
-  },
-  {
-    name: 'Ananya Das',
-    role: 'Creative Director',
-    quote: 'Design is not decoration. It is how we translate emotion into form.',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2',
-  },
-  {
-    name: 'Ritwik Sharma',
-    role: 'Photographer',
-    quote: 'I photograph people the way landscapes are meant to be seen — slowly.',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d',
-  },
-  {
-    name: 'Megha Roy',
-    role: 'Community Lead',
-    quote: 'Communities thrive when they are nurtured, not managed.',
-    image: 'https://images.unsplash.com/photo-1541647376583-8934aaf3448a',
-  },
-  {
-    name: 'Someone Else',
-    role: 'Designer',
-    quote: 'Craft is the quiet part of taste.',
-    image: 'https://images.unsplash.com/photo-1541647376583-8934aaf3448a',
-  },
-];
+import { MEET_THE_TEAM } from '../constants';
 
 const pad2 = (n: number) => String(n).padStart(2, '0');
 
@@ -52,8 +12,8 @@ export default function MeetTheTeamSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const reduce = useReducedMotion();
 
-  const total = TEAM.length;
-  const member = TEAM[active];
+  const total = MEET_THE_TEAM.teamMembers.length;
+  const member = MEET_THE_TEAM.teamMembers[active];
   const counter = `${pad2(active + 1)} / ${pad2(total)}`;
 
   const next = () => setActive((p) => (p + 1) % total);
@@ -117,7 +77,7 @@ export default function MeetTheTeamSection() {
 
                 <div className="absolute inset-0 grid place-items-center">
                   <span className="rotate-90 text-xs tracking-[0.35em] text-gray-700">
-                    Reviews
+                    {MEET_THE_TEAM.leftRailLabel}
                   </span>
                 </div>
               </div>
@@ -169,7 +129,7 @@ export default function MeetTheTeamSection() {
             <div className="grid grid-cols-1 md:grid-cols-[120px_360px_1fr] md:gap-16">
               <div className="hidden md:block" />
               <div className="flex items-end gap-6">
-                {TEAM.map((m, i) => (
+                {MEET_THE_TEAM.teamMembers.map((m, i) => (
                   <button
                     key={i}
                     onClick={() => setActive(i)}

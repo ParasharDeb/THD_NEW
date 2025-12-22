@@ -1,3 +1,5 @@
+import { BUTTON } from '../constants';
+
 export default function LearnMoreButton() {
   return (
     <span className="flex items-center justify-center bg-bgcream rounded-full">
@@ -13,7 +15,7 @@ export default function LearnMoreButton() {
 
         {/* Text lane */}
         <span className="relative z-10 ml-5 flex h-full items-center justify-center text-[#282936] transition-colors duration-500 group-hover:text-white">
-          Read Now
+          {BUTTON.learnMore}
         </span>
 
       </button>
