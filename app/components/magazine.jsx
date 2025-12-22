@@ -4,12 +4,13 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Leftarrow from '../icons/leftarrow';
 import Rightarrow from '../icons/rightarrow';
-import { redirect } from 'next/navigation';
+import LearnMoreButton from './button';
+
 
 // Magazine data
 const magazines = [
   {
-    image: './mag1.jpg',
+    image: './1st.jpg',
     title: 'Full Moon Bali',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -18,7 +19,7 @@ const magazines = [
     magazinelink:"https://drive.google.com/file/d/1rd93xq0YhGLRejlJPBcO7c-b9jPacx0K/view?usp=drive_link",
   },
   {
-    image: './mag2.jpg',
+    image: './mag3.jpg',
     title: 'Sacred Grove Escape',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -27,7 +28,7 @@ const magazines = [
     magazinelink:"https://drive.google.com/file/d/1S5gQi0W59sC8HWlUxOwpYX8MHG0CRpO-/view?usp=sharing",
   },
   {
-    image: './mag3.jpg',
+    image: './3rd.jpg',
     title: 'Zen Mountain Retreat',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -36,7 +37,7 @@ const magazines = [
     magazinelink:"https://drive.google.com/file/d/12vuuD1JOVdXJytRp97xo1lU5U34jozxz/view?usp=sharing",
   },
   {
-    image: './mag4.jpg',
+    image: './4th.jpg',
     title: 'Oceanic Bliss Camp',
     description1: 'Unleash your inner light under the transformative glow of Bali’s full moon.',
     description2: 'This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese tradition.',
@@ -61,7 +62,7 @@ export default function RetreatMagazineSection() {
   };
 
   return (
-    <section className="w-full h-[460px] bg-bgMain flex flex-col items-center py-8 px-4">
+    <section className="w-full h-fit bg-bgMain flex flex-col items-center py-8 px-4">
       
       {/* Heading */}
       <h2 className="text-[2rem] font-serif text-textBrown font-semibold mb-6">
@@ -69,7 +70,7 @@ export default function RetreatMagazineSection() {
       </h2>
 
       {/* Carousel */}
-      <div className="relative flex justify-center w-full max-w-3xl items-center">
+      <div className="relative flex justify-center h-[60vh] w-[70vw]  items-center">
 
         {/* Left Arrow */}
         <button
@@ -81,7 +82,7 @@ export default function RetreatMagazineSection() {
         </button>
 
         {/* Card */}
-        <div className="flex w-full h-[260px] bg-white border border-bgMain rounded shadow-md overflow-hidden">
+        <div className="flex w-full h-fit bg-white border border-bgMain rounded shadow-md overflow-hidden">
 
           {/* Image */}
           <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -99,7 +100,7 @@ export default function RetreatMagazineSection() {
           </AnimatePresence>
 
           {/* Text Container */}
-          <div className="flex flex-col flex-1 h-full px-6 py-5 bg-bgCream overflow-hidden">
+          <div className="flex flex-col flex-1 h-full px-6 py-25 bg-bgCream overflow-hidden">
 
             {/* Scrollable text */}
             <div className="flex-1 overflow-y-auto scrollbar-hide">
@@ -131,13 +132,14 @@ export default function RetreatMagazineSection() {
             </div>
 
             {/* CTA */}
+
             <button
               onClick={() =>
                 
                   window.open(magazines[current].magazinelink)
                 
               }
-              className="mt-3 w-max px-4 py-1 rounded-full border border-accent bg-yellow-100 hover:bg-bgcream font-medium text-textBrown text-[15px] transition shadow"
+              className="mt-3 w-max px-4 py-1 rounded-full border border-accent bg-yellow-100 hover:bg-bgcream font-medium text-textBrown text-[15px] transition shadow mt-10"
             >
               {magazines[current].ctaButton}
             </button>

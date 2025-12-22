@@ -32,61 +32,6 @@ export const MOTO = {
   ]
 };
 
-export const MAGAZINE = {
-  title1: "Which Serene Retreat calls you?",
-  retreat: {
-    title: "Full Moon Bali",
-    description1: "Unleash your inner light under the transformative glow of Bali's full moon.",
-    description2: "This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese traditions.",
-    description3: "Connect with a supportive community and return home empowered, renewed, and connected.",
-    ctaButton: "READ NOW"
-  },
-  title2: "Which Serene Retreat calls you?",
-  retreat2: {
-    title: "Full Moon Bali",
-    description1: "Unleash your inner light under the transformative glow of Bali's full moon.",
-    description2: "This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese traditions.",
-    description3: "Connect with a supportive community and return home empowered, renewed, and connected.",
-    ctaButton: "READ NOW"
-  },
-  
-  title3: "Which Serene Retreat calls you?",
-  retreat3: {
-    title: "Full Moon Bali",
-    description1: "Unleash your inner light under the transformative glow of Bali's full moon.",
-    description2: "This retreat guides you on a journey of self-discovery, deep healing, and spiritual awakening through yoga, meditation, sound healing, and Balinese traditions.",
-    description3: "Connect with a supportive community and return home empowered, renewed, and connected.",
-    ctaButton: "READ NOW"
-  }
-  
-};
-
-export const MEET_THE_TEAM = {
-  title: "Meet Our Team",
-  subtitle: "Guided by experienced wellness professionals",
-  teamMembers: [
-    {
-      name: "Sarah Chen",
-      role: "Lead Wellness Coach",
-      description: "Certified yoga instructor with 10+ years of experience in women's wellness and spiritual healing."
-    },
-    {
-      name: "Maria Rodriguez", 
-      role: "Sound Healing Specialist",
-      description: "Master practitioner of sound therapy and meditation, helping women find their inner voice."
-    },
-    {
-      name: "Dr. Emily Watson",
-      role: "Holistic Health Advisor", 
-      description: "Integrative medicine practitioner specializing in women's mental and physical wellness."
-    },
-    {
-      name: "Luna Patel",
-      role: "Retreat Coordinator",
-      description: "Dedicated to creating transformative experiences and fostering deep connections among retreat participants."
-    }
-  ]
-};
 
 export const RETREAT_INCLUSIONS = {
   title: "What's Included in Your Retreat",

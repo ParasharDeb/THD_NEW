@@ -1,6 +1,6 @@
 export default function LearnMoreButton() {
   return (
-    <div className="flex items-center justify-center bg-bgcream rounded-full">
+    <span className="flex items-center justify-center bg-bgcream rounded-full">
       <button className="group relative h-12 w-48 overflow-hidden rounded-full font-bold uppercase cursor-pointer">
 
         {/* Background expansion */}
@@ -17,6 +17,6 @@ export default function LearnMoreButton() {
         </span>
 
       </button>
-    </div>
+    </span>
   );
 }
