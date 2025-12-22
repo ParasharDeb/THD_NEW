@@ -4,7 +4,9 @@ import { NAVIGATION, HERO } from '../constants';
 import Learnmore from "../components/button";
 
 const IMAGES = [
+
   "./main.JPG",
+  "./main12.jpg",
   "./main2.jpeg",
   "./main3.jpeg",
   "./main4.jpeg",

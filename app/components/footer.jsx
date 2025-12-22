@@ -1,97 +1,104 @@
 'use client';
 
-import { FOOTER } from '../constants';
-
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-bgMain py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand Section */}
-          <div className="md:col-span-1">
-            <h3 className="text-2xl font-serif text-textGreen font-semibold mb-3">
-              {FOOTER.brandName}
-            </h3>
-            <p className="text-textGreen text-sm font-light leading-relaxed">
-              {FOOTER.tagline}
-            </p>
-          </div>
+    <section className="w-full bg-bgMain py-20 px-6">
+      <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
 
-          {/* Retreats Section */}
-          <div>
-            <h4 className="text-textGreen font-semibold mb-4 text-sm tracking-wide uppercase">
-              {FOOTER.sections.retreats.title}
-            </h4>
-            <ul className="space-y-2">
-              {FOOTER.sections.retreats.links.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className="text-textGreen text-sm hover:text-accent transition-colors"
+        {/* LEFT SIDE — CONTACT INFO */}
+        <div>
+          <h2 className="text-[2.75rem] font-serif text-textBrown mb-8">
+            Get in touch
+          </h2>
+
+          <div className="space-y-6 text-textGreen">
+            <div>
+              <p className="text-sm uppercase tracking-wide mb-1">Email</p>
+              <p className="text-base">hello@thehargiladesk.com</p>
+            </div>
+
+            <div>
+              <p className="text-sm uppercase tracking-wide mb-1">Phone</p>
+              <p className="text-base">+91 9XXXX XXXXX</p>
+            </div>
+
+            <div>
+              <p className="text-sm uppercase tracking-wide mb-1">Address</p>
+              <p className="text-base leading-relaxed">
+                The Hargila Desk<br />
+                Assam, India
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm uppercase tracking-wide mb-3">Follow us</p>
+              <div className="flex gap-4">
+                {['Instagram', 'Facebook', 'LinkedIn', 'X'].map((s, i) => (
+                  <span
+                    key={i}
+                    className="w-9 h-9 flex items-center justify-center rounded-full border border-textGreen text-textGreen hover:bg-bgCream transition cursor-pointer"
                   >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support Section */}
-          <div>
-            <h4 className="text-textGreen font-semibold mb-4 text-sm tracking-wide uppercase">
-              {FOOTER.sections.support.title}
-            </h4>
-            <ul className="space-y-2">
-              {FOOTER.sections.support.links.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className="text-textGreen text-sm hover:text-accent transition-colors"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Community Section */}
-          <div>
-            <h4 className="text-textGreen font-semibold mb-4 text-sm tracking-wide uppercase">
-              {FOOTER.sections.community.title}
-            </h4>
-            <ul className="space-y-2">
-              {FOOTER.sections.community.links.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className="text-textGreen text-sm hover:text-accent transition-colors"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Social & Contact */}
-        <div className="border-t border-accent/30 pt-6 mb-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex flex-col md:flex-row gap-4 text-sm text-textGreen">
-              <span>{FOOTER.social.instagram}</span>
-              <span className="hidden md:block">•</span>
-              <span>{FOOTER.social.email}</span>
+                    {s[0]}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="text-center text-textGreen text-xs">
-          {FOOTER.copyright}
+        {/* RIGHT SIDE — FORM */}
+        <div className="bg-bgCream rounded-2xl p-8 shadow-sm">
+          <form className="space-y-6">
+
+            {/* Name + Email */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm text-textGreen mb-1">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your full name"
+                  className="w-full rounded-xl bg-bgMain px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-accent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-textGreen mb-1">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  className="w-full rounded-xl bg-bgMain px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-accent"
+                />
+              </div>
+            </div>
+
+            {/* Message */}
+            <div>
+              <label className="block text-sm text-textGreen mb-1">
+                Message
+              </label>
+              <textarea
+                rows={5}
+                placeholder="Write something..."
+                className="w-full rounded-xl bg-bgMain px-4 py-3 text-sm resize-none outline-none focus:ring-1 focus:ring-accent"
+              />
+            </div>
+
+            {/* Button */}
+            <button
+              type="submit"
+              className="w-full rounded-full bg-black py-3 text-white text-sm font-medium hover:opacity-90 transition"
+            >
+              Send Message
+            </button>
+
+          </form>
         </div>
+
       </div>
-    </footer>
+    </section>
   );
 }
