@@ -1,26 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Dark variant helper */
 @custom-variant dark (&:is(.dark *));
 
+/* Design tokens */
 @theme {
-  --color-bgMain:#F6E6BB;
-  --color-secondary:#41915B;
-  --color-navbar:#E3D7B5;
-  --color-bgcream: #87A35D;
-  --color-accent: #57804F;
+  --color-bgMain: #f6e6bb;
+  --color-secondary: #41915b;
+  --color-navbar: #e3d7b5;
+  --color-bgcream: #87a35d;
+  --color-accent: #57804f;
   --color-text-green: #596756;
-  --color-text-brown: #96795C;
-  --color-yellow:#F6E8A1;
-  /* Font Families */
+  --color-text-brown: #96795c;
+  --color-yellow: #f6e8a1;
+
+  /* Font families */
   --font-serif: "Cormorant Garamond", serif;
 
-  /* Border Radius */
+  /* Border radius */
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
 }
 
+/* Hide scrollbars */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -29,6 +33,7 @@
   scrollbar-width: none;
 }
 
+/* Arrow used in buttons */
 .arrow {
   width: 18px;
   height: 2px;
@@ -50,30 +55,10 @@
 
 .group:hover .arrow {
   background: white;
-
-  transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-
-
-.animate-scroll-slow {
-  animation: scroll 1200s linear infinite;
-}
-
-/* Optional: pause on hover */
-.animate-scroll:hover,
-.animate-scroll-slow:hover {
-  animation-play-state: paused;
-}
+/* Infinite scroll animations */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -86,3 +71,14 @@
 .animate-scroll {
   animation: scroll 150s linear infinite;
 }
+
+.animate-scroll-slow {
+  animation: scroll 1200s linear infinite;
+}
+
+/* Optional: pause on hover */
+.animate-scroll:hover,
+.animate-scroll-slow:hover {
+  animation-play-state: paused;
+}
+

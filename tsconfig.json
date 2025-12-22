@@ -37,7 +37,7 @@
     "**/*.mts",
     ".next\\dev/types/**/*.ts",
     ".next\\dev/types/**/*.ts"
-, "app/components/moto.jsx"  ],
+, "app/components/moto.jsx", "app/components/meettheteam.jsx"  ],
   "exclude": [
     "node_modules"
   ]
