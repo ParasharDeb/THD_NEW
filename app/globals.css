@@ -5,10 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-bgMain:#eee7c7;
-  --color-bgsecondary:#d8dac5;
-  --color-bgcream: #CFBB99;
-  --color-accent: #889063;
+  --color-bgMain:#F6E6BB;
+  --color-secondary:#41915B;
+  --color-navbar:#E3D7B5;
+  --color-bgcream: #87A35D;
+  --color-accent: #57804F;
   --color-text-green: #596756;
   --color-text-brown: #96795C;
   --color-yellow:#F6E8A1;
@@ -62,9 +63,7 @@
   }
 }
 
-.animate-scroll {
-  animation: scroll 120s linear infinite;
-}
+
 
 .animate-scroll-slow {
   animation: scroll 1200s linear infinite;
@@ -85,5 +84,5 @@
 }
 
 .animate-scroll {
-  animation: scroll 30s linear infinite;
+  animation: scroll 150s linear infinite;
 }

@@ -46,7 +46,7 @@ const TEAM: TeamMember[] = [
 
 const pad2 = (n: number) => String(n).padStart(2, '0');
 
-export default function MeetTheTeamExact() {
+export default function MeetTheTeamSection() {
   const [active, setActive] = useState(0);
   const [hasFocus, setHasFocus] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -101,7 +101,7 @@ export default function MeetTheTeamExact() {
       tabIndex={0}
       onFocus={() => setHasFocus(true)}
       onBlur={() => setHasFocus(false)}
-      className="w-full bg-bgcream py-24 outline-none"
+      className="w-full bg-secondary py-24 outline-none"
     >
       <LayoutGroup id="team-layout">
         <div className="mx-auto max-w-7xl px-6">
@@ -155,7 +155,7 @@ export default function MeetTheTeamExact() {
                     <p className="mt-1 text-xs text-gray-500">{member.role}</p>
 
                     <p className="mt-8 text-lg font-medium leading-relaxed text-gray-900">
-                      “{member.quote}”
+                      "{member.quote}"
                     </p>
                   </motion.div>
                 </AnimatePresence>
@@ -191,13 +191,11 @@ export default function MeetTheTeamExact() {
                 ))}
               </div>
 
-              {/* Keep empty space to match right whitespace */}
-              <div className="hidden md:block" />
+
             </div>
           </div>
 
-          {/* Thin baseline line (subtle, like the inspo) */}
-          <div className="mt-14 h-px w-full bg-black/10" />
+
         </div>
       </LayoutGroup>
     </section>

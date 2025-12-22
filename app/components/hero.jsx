@@ -19,7 +19,7 @@ const IMAGES = [
 export default function HeroSection() {
   return (
     <div>
-      <section className="bg-gradient-to-b from-bgsecondary from-30% to-bgMain to-30% h-[650px] flex flex-col items-center py-8 px-6">
+      <section className="bg-gradient-to-b from-navbar from-30% to-bgMain to-30% h-[650px] flex flex-col items-center py-8 px-6">
 
         {/* NAVBAR */}
         <nav className="flex w-full justify-between items-center px-8 max-w-4xl text-textGreen text-base font-medium mb-4 tracking-wide">

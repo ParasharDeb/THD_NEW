@@ -37,10 +37,10 @@ export default function MotoSection() {
               <h3 className="text-lg md:text-xl font-serif font-semibold mb-2 text-textGreen">
                 {card.title}
               </h3>
-              <p className="text-[13px] leading-snug text-textGreen font-light">
+            <p className="text-[13px] leading-snug text-textGreen font-light">
                 {card.description}
-              </p>
-            </div>
+            </p>
+          </div>
           ))}
         </div>
       </div>

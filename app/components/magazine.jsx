@@ -139,7 +139,7 @@ export default function RetreatMagazineSection() {
                   window.open(magazines[current].magazinelink)
                 
               }
-              className="mt-3 w-max px-4 py-1 rounded-full border border-accent bg-yellow-100 hover:bg-bgcream font-medium text-textBrown text-[15px] transition shadow mt-10"
+              className="mt-3 w-max px-4 py-1 rounded-full border border-accent bg-bgcream hover:scale-3d cursor-pointer font-medium text-textBrown text-[15px] transition shadow mt-10"
             >
               {magazines[current].ctaButton}
             </button>
