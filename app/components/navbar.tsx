@@ -10,7 +10,7 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const menuRef = useRef<HTMLDivElement>(null);
 
-  /* ---------------- SMOOTH SCROLL (NEXT.JS SAFE) ---------------- */
+  /* ---------------- SMOOTH SCROLL ---------------- */
   const smoothScroll = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -23,11 +23,11 @@ export function Navbar() {
 
   /* ---------------- CLOSE MENU ON OUTSIDE CLICK ---------------- */
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
-    }
+    };
 
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -38,18 +38,21 @@ export function Navbar() {
     };
   }, [isOpen]);
 
-  /* ---------------- ACTIVE LINK ON SCROLL ---------------- */
+  /* ---------------- ACTIVE LINK ON SCROLL (TYPE SAFE) ---------------- */
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
+    // ✅ FIX: HTMLElement generic
+    const sections = document.querySelectorAll<HTMLElement>("section[id]");
 
     const onScroll = () => {
       let current = "";
+
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 120;
         if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id") || "";
+          current = section.id;
         }
       });
+
       setActiveSection(current);
     };
 
@@ -171,7 +174,9 @@ export function Navbar() {
                     setIsOpen(false);
                   }}
                   className={`px-4 py-3 rounded-lg hover:bg-emerald-50 ${
-                    activeSection === "magazine" ? "bg-emerald-50 font-semibold" : ""
+                    activeSection === "magazine"
+                      ? "bg-emerald-50 font-semibold"
+                      : ""
                   }`}
                 >
                   {NAVIGATION.retreats}
@@ -185,7 +190,9 @@ export function Navbar() {
                     setIsOpen(false);
                   }}
                   className={`px-4 py-3 rounded-lg hover:bg-emerald-50 ${
-                    activeSection === "meettheteam" ? "bg-emerald-50 font-semibold" : ""
+                    activeSection === "meettheteam"
+                      ? "bg-emerald-50 font-semibold"
+                      : ""
                   }`}
                 >
                   {NAVIGATION.shop}
@@ -199,7 +206,9 @@ export function Navbar() {
                     setIsOpen(false);
                   }}
                   className={`px-4 py-3 rounded-lg hover:bg-emerald-50 ${
-                    activeSection === "footer" ? "bg-emerald-50 font-semibold" : ""
+                    activeSection === "footer"
+                      ? "bg-emerald-50 font-semibold"
+                      : ""
                   }`}
                 >
                   {NAVIGATION.contact}
