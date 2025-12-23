@@ -24,6 +24,11 @@
   --radius-2xl: 1.5rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Hide scrollbars */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
