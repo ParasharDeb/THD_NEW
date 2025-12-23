@@ -1,7 +1,7 @@
 "use client";
 
 import { FOOTER } from "../constants";
-
+import { Instagram, Linkedin } from "lucide-react";
 
 export default function FooterSection() {
   return (
@@ -44,14 +44,29 @@ export default function FooterSection() {
                 {FOOTER.contact.social.label}
               </p>
               <div className="flex gap-4">
-                {FOOTER.contact.social.platforms.map((s, i) => (
-                  <span
-                    key={i}
-                    className="w-9 h-9 flex items-center justify-center rounded-full border border-textGreen text-textGreen hover:bg-bgCream transition cursor-pointer"
-                  >
-                    {s[0]}
-                  </span>
-                ))}
+                {FOOTER.contact.social.platforms.map((s, i) => {
+                  const url =
+                    s === "Instagram"
+                      ? "https://www.instagram.com/the_hargila_desk/"
+                      : s === "LinkedIn"
+                      ? "https://www.linkedin.com/company/the-hargila-desk/"
+                      : null;
+
+                  const Icon = s === "Instagram" ? Instagram : Linkedin;
+
+                  return url ? (
+                    <a
+                      key={i}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={s}
+                      className="w-9 h-9 flex items-center justify-center rounded-full border border-textGreen text-textGreen hover:bg-bgCream transition"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  ) : null;
+                })}
               </div>
             </div>
           </div>
@@ -100,7 +115,7 @@ export default function FooterSection() {
             {/* Button */}
             <button
               type="submit"
-              className="w-full rounded-full bg-black py-3 text-white text-sm font-medium hover:opacity-90 transition"
+              className="w-full rounded-full bg-bgcream py-3 text-white text-sm font-medium hover:opacity-90 transition"
             >
               {FOOTER.form.submitButton}
             </button>

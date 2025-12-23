@@ -181,7 +181,7 @@ export const FOOTER = {
     },
     social: {
       label: "Follow us",
-      platforms: ["Instagram", "Facebook", "LinkedIn", "X"],
+      platforms: ["Instagram", "LinkedIn"],
     },
   },
   form: {
