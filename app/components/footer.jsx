@@ -2,6 +2,7 @@
 
 import { FOOTER } from "../constants";
 
+
 export default function FooterSection() {
   return (
     <section className="w-full bg-bgMain py-20 px-6">

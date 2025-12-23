@@ -162,21 +162,34 @@ export const RETREAT_INCLUSIONS = {
 
 // ============================================
 // FOOTER SECTION
+
+//Email
+
+// thehargiladesk@gmail.com
+
+// Phone
+
+// +91 8638996790
+
+// Address
+
+// Beltola, Guwahati
+// Assam, India
 // ============================================
 export const FOOTER = {
   title: "Get in touch",
   contact: {
     email: {
       label: "Email",
-      value: "hello@thehargiladesk.com",
+      value: "thehargiladesk@gmail.com",
     },
     phone: {
       label: "Phone",
-      value: "+91 9XXXX XXXXX",
+      value: "+91 8638996790",
     },
     address: {
       label: "Address",
-      value: "The Hargila Desk",
+      value: "Beltola, Guwahati",
       location: "Assam, India",
     },
     social: {
