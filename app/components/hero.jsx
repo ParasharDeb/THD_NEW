@@ -4,15 +4,15 @@ import { HERO } from "../constants";
 import Learnmore from "../components/button";
 
 const IMAGES = [
-  "./main.JPG",
-  "./main12.jpg",
-  "./main2.jpeg",
+  "./main.webp",
+  "./main12.webp",
+  "./main2.webp",
   "./main3.jpeg",
-  "./main4.jpeg",
-  "./main5.jpeg",
-  "./main6.jpeg",
-  "./main7.jpeg",
-  "./main8.jpeg",
+  "./main4.webp",
+  "./main5.webp",
+  "./main6.webp",
+  "./main7.webp",
+  "./main8.webp",
 ];
 
 export default function HeroSection() {

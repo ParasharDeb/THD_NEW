@@ -62,7 +62,7 @@ export default function RetreatMagazineSection() {
           {/* Text Container */}
           <div className="flex flex-col flex-1 h-full p-6 bg-bgCream overflow-hidden">
             {/* Scrollable text */}
-            <div className="flex-1 overflow-y-auto scrollbar-hide">
+            <div className="flex-1 pt-12 overflow-y-auto scrollbar-hide">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={MAGAZINE.magazines[current].title + current}

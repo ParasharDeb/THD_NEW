@@ -51,11 +51,11 @@ export const MOTO = {
 // MAGAZINE SECTION
 // ============================================
 export const MAGAZINE = {
-  title: "OUR MAGAZINE",
+  title: "READ OUR EDITIONS",
   ctaButton: "READ NOW",
   magazines: [
     {
-      image: "./1st.jpg",
+      image: "./1st.webp",
       title: "Full Moon Bali",
       description1:
         "Unleash your inner light under the transformative glow of Balis full moon.",
@@ -79,7 +79,7 @@ export const MAGAZINE = {
         "https://drive.google.com/file/d/1S5gQi0W59sC8HWlUxOwpYX8MHG0CRpO-/view?usp=sharing",
     },
     {
-      image: "./3rd.jpg",
+      image: "./3rd.webp",
       title: "Zen Mountain Retreat",
       description1:
         "Unleash your inner light under the transformative glow of Balis full moon.",
@@ -91,7 +91,7 @@ export const MAGAZINE = {
         "https://drive.google.com/file/d/12vuuD1JOVdXJytRp97xo1lU5U34jozxz/view?usp=sharing",
     },
     {
-      image: "./4th.jpg",
+      image: "./4th.webp",
       title: "Oceanic Bliss Camp",
       description1:
         "Unleash your inner light under the transformative glow of Balis full moon.",
