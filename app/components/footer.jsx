@@ -8,7 +8,7 @@ export default function FooterSection() {
     <section className="w-full bg-bgMain py-20 px-6" id="footer">
       <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
         {/* LEFT SIDE — CONTACT INFO */}
-        <div>
+        <div className="order-2 md:order-1">
           <h2 className="text-[2.75rem] font-serif text-textBrown mb-8">
             {FOOTER.title}
           </h2>
@@ -73,7 +73,7 @@ export default function FooterSection() {
         </div>
 
         {/* RIGHT SIDE — FORM */}
-        <div className="bg-white border border-neutral-200 rounded-2xl p-8 shadow-sm">
+        <div className="order-1 md:order-2 bg-white border border-neutral-200 rounded-2xl p-8 shadow-sm">
           <form className="space-y-6">
             {/* Name + Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
