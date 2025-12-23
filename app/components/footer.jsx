@@ -5,7 +5,7 @@ import { FOOTER } from "../constants";
 
 export default function FooterSection() {
   return (
-    <section className="w-full bg-bgMain py-20 px-6">
+    <section className="w-full bg-bgMain py-20 px-6" id="footer">
       <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
         {/* LEFT SIDE — CONTACT INFO */}
         <div>

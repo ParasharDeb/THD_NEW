@@ -25,7 +25,7 @@ export default function RetreatMagazineSection() {
   };
 
   return (
-    <section className="w-full h-fit bg-yellow-100 flex flex-col items-center py-8 px-4">
+    <section className="w-full h-fit bg-yellow-100 flex flex-col items-center py-8 px-4" id="magazine">
       {/* Heading */}
       <h2 className="text-[2rem] font-serif text-textBrown text-center max-w-fit mx-auto font-semibold mb-6">
         {MAGAZINE.title}

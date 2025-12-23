@@ -17,7 +17,7 @@ const IMAGES = [
 
 export default function HeroSection() {
   return (
-    <div className="w-full">
+    <div className="w-full" id="hero">
       <section className="min-h-[650px] flex flex-col items-center py-8 px-2 sm:px-6">
         <div className="w-full overflow-hidden">
           <div className="flex w-max gap-6 px-6 py-8 animate-scroll">

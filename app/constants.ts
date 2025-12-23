@@ -3,7 +3,7 @@
 // ============================================
 export const NAVIGATION = {
   home: "HOME",
-  retreats: "ALL ISSUES",
+  retreats: "MAGAZINES",
   shop: "MEET THE TEAM",
   contact: "CONTACT",
 };
@@ -26,23 +26,23 @@ export const HERO = {
 // MOTO SECTION
 // ============================================
 export const MOTO = {
-  bannerText: "WELLNESS RETREATS",
+  bannerText: "Community",
   title: "THE HARGILA DESK MOTO",
   cards: [
     {
       title: "Connection",
       description:
-        "Surround yourself with supportive, like-minded women on a shared journey of self-discovery. Forge lasting bonds through authentic experiences and heartfelt conversations.",
+        "A collective of passionate, like-minded youth coming together to share ideas, stories, and action for nature. We believe change grows stronger when voices unite.",
     },
     {
-      title: "Healing",
+      title: "Culture",
       description:
-        "Embark on a transformative journey to release what no longer serves you, and discover the tools and support you need to heal, empower yourself, and live your most authentic life.",
+        "Rooted in tradition and indigenous wisdom, we learn from culture to shape sustainable ways of living. Our past guides our present choices for a better future.",
     },
     {
-      title: "Joy",
+      title: "Conservation",
       description:
-        "Reconnect with your inner spark and rekindle your sense of playfulness by rediscovering the simple joys of life. Immerse yourself in the beauty of nature and allow yourself to experience moments of pure bliss.",
+        "Dedicated to protecting biodiversity and responding to the climate crisis through awareness, creativity, and responsibility. Conservation begins with care and continues with action!",
     },
   ],
 };
@@ -162,19 +162,6 @@ export const RETREAT_INCLUSIONS = {
 
 // ============================================
 // FOOTER SECTION
-
-//Email
-
-// thehargiladesk@gmail.com
-
-// Phone
-
-// +91 8638996790
-
-// Address
-
-// Beltola, Guwahati
-// Assam, India
 // ============================================
 export const FOOTER = {
   title: "Get in touch",
