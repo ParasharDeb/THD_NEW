@@ -86,3 +86,45 @@ html {
 .animate-scroll-slow:hover {
   animation-play-state: paused;
 }
+
+/* Articles grid and card hover animation */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.article-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1), box-shadow 220ms;
+  will-change: transform;
+}
+
+.article-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-card .card-body {
+  padding: 1rem;
+}
+
+.article-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.article-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.article-excerpt {
+  color: #556b5b;
+  font-size: 0.95rem;
+}
+

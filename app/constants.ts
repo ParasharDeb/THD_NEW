@@ -3,7 +3,9 @@
 // ============================================
 export const NAVIGATION = {
   home: "HOME",
+  activity:"ACTIVITY",
   retreats: "MAGAZINES",
+  article:"ARTICLE",
   shop: "MEET THE TEAM",
   contact: "CONTACT",
 };

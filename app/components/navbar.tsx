@@ -67,8 +67,8 @@ export function Navbar() {
       <nav className="w-full px-4 sm:px-8 max-w-4xl mx-auto text-emerald-800 p-4">
 
         {/* ================= DESKTOP ================= */}
-        <div className="hidden md:flex justify-between items-center text-base font-medium tracking-wide">
-          <div className="flex gap-8 lg:gap-12">
+        <div className="hidden md:flex justify-between items-center text-sm font-medium tracking-wide">
+          <div className="flex gap-6 lg:gap-8">
             <Link
               href="/#hero"
               onClick={(e) => {
@@ -80,6 +80,19 @@ export function Navbar() {
               }`}
             >
               {NAVIGATION.home}
+            </Link>
+
+            <Link
+              href="/#activity"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScroll("activity");
+              }}
+              className={`hover:underline ${
+                activeSection === "activity" ? "underline font-semibold" : ""
+              }`}
+            >
+              {NAVIGATION.activity}
             </Link>
 
             <Link
@@ -100,7 +113,20 @@ export function Navbar() {
             {HERO.title}
           </h1>
 
-          <div className="flex gap-8 lg:gap-12">
+          <div className="flex gap-6 lg:gap-8">
+            <Link
+              href="/#footer"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScroll("footer");
+              }}
+              className={`hover:underline ${
+                activeSection === "footer" ? "underline font-semibold" : ""
+              }`}
+            >
+              {NAVIGATION.contact}
+            </Link>
+
             <Link
               href="/#meettheteam"
               onClick={(e) => {
@@ -114,17 +140,8 @@ export function Navbar() {
               {NAVIGATION.shop}
             </Link>
 
-            <Link
-              href="/#footer"
-              onClick={(e) => {
-                e.preventDefault();
-                smoothScroll("footer");
-              }}
-              className={`hover:underline ${
-                activeSection === "footer" ? "underline font-semibold" : ""
-              }`}
-            >
-              {NAVIGATION.contact}
+            <Link href="/articles" className="hover:underline">
+              ARTICLES
             </Link>
           </div>
         </div>
@@ -167,6 +184,22 @@ export function Navbar() {
                 </Link>
 
                 <Link
+                  href="/#activity"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    smoothScroll("activity");
+                    setIsOpen(false);
+                  }}
+                  className={`px-4 py-3 rounded-lg hover:bg-emerald-50 ${
+                    activeSection === "activity"
+                      ? "bg-emerald-50 font-semibold"
+                      : ""
+                  }`}
+                >
+                  {NAVIGATION.activity}
+                </Link>
+
+                <Link
                   href="/#magazine"
                   onClick={(e) => {
                     e.preventDefault();
@@ -180,6 +213,10 @@ export function Navbar() {
                   }`}
                 >
                   {NAVIGATION.retreats}
+                </Link>
+
+                <Link href="/articles" onClick={() => setIsOpen(false)} className="px-4 py-3 rounded-lg hover:bg-emerald-50">
+                  ARTICLES
                 </Link>
 
                 <Link
